@@ -1,0 +1,21 @@
+<template name="postForm">
+  <form role="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" class="form-control" value="{{title}}" />
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="text" name="image" class="form-control" value="{{image}}" />
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea name="content" class="form-control" rows="6" value="{{content}}"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary postNew"><i class="fa fa-pencil"></i> Add New Post</button>
+      <button type="submit" class="btn btn-warning postEdit"><i class="fa fa-pencil"></i> Update Post</button>
+      <button type="button" class="btn btn-danger postDelete"><i class="fa fa-trash"></i> Delete Post</button>
+    </div>
+  </form>
+</template>

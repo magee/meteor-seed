@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-size: 16px;
+  color: #333;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+/* typography */
+a {
+  color: #2AA4A8;
+}
+a:hover,
+a:focus,
+a:visited {
+  color: #168D91;
+}
+/* layout */
+.layout {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+/* main */
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0 0 50px;
+  margin: 0;
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+
+}
+
+/* Phones */
+
+@media (max-width: 400px) {
+
+}
+
+/* Phone to tablets */
+
+@media (min-width: 400px) and (max-width: 767px) {
+
+}

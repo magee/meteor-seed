@@ -1,0 +1,13 @@
+<template name="posts">
+  <div class="container-fluid view">
+    <h1>
+      Posts
+      {{#if currentUser}}
+        <small class="pull-right"><a href="{{pathFor 'postNew'}}" class="btn btn-default"><i class="fa fa-pencil"></i> Add new post</a></small>
+      {{/if}}
+    </h1>
+    {{#each posts}}
+      {{> post}}
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,17 @@
+<template name="postShow">
+  <div class="container-fluid">
+    <h1>
+      {{title}}
+      <small>submitted on {{submitted}}</small>
+      {{#if ownPost}}
+        <span class="pull-right">
+          <a href="{{pathFor 'postEdit'}}" class="btn btn-default">
+            <i class="fa fa-pencil"></i> Edit Post
+          </a>
+        </span>
+      {{/if}}
+    </h1>
+    <img src="{{image}}" class="img-responsive" />
+    <p class="lead">{{content}}</p>
+  </div>
+</template>
