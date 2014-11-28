@@ -1,29 +1,39 @@
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    /*
-    Follow the instructions under https://atmospherejs.com/mrt/accounts-admin-ui-bootstrap-3 to setup app for admin roles
-    */
-    // bootstrap the admin user if they exist -- You'll be replacing the id later
-    if (Meteor.users.findOne("your_admin_user_id")){
-      Roles.addUsersToRoles("your_admin_user_id", ['admin']);
+    console.log('starting admin bootstrap');
+
+    if (Meteor.users.findOne("rcABZ7Hjoohqgb434")){
+      console.log('adding roles to magee');
+      Roles.addUsersToRoles(["rcABZ7Hjoohqgb434"], ['admin', 'user-admin'], Roles.GLOBAL_GROUP);
+    }
+    if (Meteor.users.findOne("user2")){
+      Roles.addUsersToRoles("user2", ['editor']);
+    }
+    if (Meteor.users.findOne("user3")){
+      Roles.addUsersToRoles("user3", ['reader']);
     }
 
     // create a couple of roles if they don't already exist (THESE ARE NOT NEEDED -- just for the demo)
-    if(!Meteor.roles.findOne({name: "secret"})){
-      Roles.createRole("secret");
+    if(!Meteor.roles.findOne({name: "admin"})){
+      Roles.createRole("admin");
     }
-
-    if(!Meteor.roles.findOne({name: "double-secret"})){
-      Roles.createRole("double-secret");
+    if(!Meteor.roles.findOne({name: "user-admin"})){
+      Roles.createRole("user-admin");
     }
-  });
-}
-
-if (Meteor.isClient) {
-  Template.adminTemplate.helpers({
-    // check if user is an admin
-    isAdminUser: function() {
-      return Roles.userIsInRole(Meteor.user(), ['admin']);
+    if(!Meteor.roles.findOne({name: "editor"})){
+      Roles.createRole("editor");
+    }
+    if(!Meteor.roles.findOne({name: "reader"})){
+      Roles.createRole("reader");
     }
   });
 }
+
+// if (Meteor.isClient) {
+//   Template.adminTemplate.helpers({
+//     // check if user is an admin
+//     isAdminUser: function() {
+//       return Roles.userIsInRole(Meteor.user(), ['admin']);
+//     }
+//   });
+// }

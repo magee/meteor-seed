@@ -1,9 +1,11 @@
 # Meteor Seed Project
 
-My personal Meteor seed project based on the great work of Damir Vazgird (amazingBastard) at https://github.com/amazingBastard/Meteor-Seed.
+My personal Meteor seed project.
+
+Started with the great work of Damir Vazgird (amazingBastard) at https://github.com/amazingBastard/Meteor-Seed as a foundation and customized to match my preferences.
 
 
-## Install Packages
+## Installed Packages
 
 utilities
 - settinghead:auto-nprogress

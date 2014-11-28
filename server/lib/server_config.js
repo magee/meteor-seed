@@ -20,16 +20,20 @@
 // Required for deployment in production on non-meteor hosting site
 // ROOT_URL = "http://foo.example.com"
 Meteor.startup(function () {
-  /*
+
+    /*
     Security setup - the following settings configure the use of the browser-policy package.
     See https://atmospherejs.com/meteor/browser-policy for defaults on configuring browser security.
   */
 
   // disable only if your app requires use of inline Javascript - default policy allows inline scripts
-  BrowserPolicy.content.disallowInlineScripts()
+  // BrowserPolicy.content.disallowInlineScripts()
+  // BrowserPolicy.content.allowInlineScripts()
 
   // uncomment if you want to prohibit inline CSS.  Allowed by default policy.
   // BrowserPolicy.content.disallowInlineStyles()
+  // BrowserPolicy.content.allowInlineStyles()
+
 
   // uncomment if you want your app to be able to be loaded in an iframe on any webpage.
   // BrowserPolicy.framing.allowAll()
